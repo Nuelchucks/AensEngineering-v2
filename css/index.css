@@ -1,0 +1,136 @@
+    :root {
+      --brand-blue: #0b6bd6;
+      --brand-red: #e63946;
+      --brand-white: #ffffff;
+    }
+    .hero-bg {
+      background-size: cover;
+      background-position: center;
+    }
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(6px);
+    }
+    .card-hover {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(2,6,23,0.12);
+    }
+
+    /* ✅ Product Card Hover Enhancement */
+#projects article {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#projects article:hover {
+  transform: scale(1.07);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+    /* ✅ Smooth hover scaling and subtle glowing effect for Services */
+#services .card-hover {
+  transform: scale(1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#services .card-hover:hover {
+  transform: scale(1.07);
+  box-shadow: 0 25px 50px rgba(255, 255, 255, 0.15);
+}
+
+    /* ✅ Smooth zoom-in animation for carousel background images */
+.carousel-item.active .hero-bg {
+  animation: zoomInBg 8s ease-in-out forwards;
+}
+
+@keyframes zoomInBg {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Ensures smooth scaling */
+.hero-bg {
+  transition: transform 8s ease-in-out;
+  will-change: transform;
+  overflow: hidden;
+}
+
+    /* ✅ Loader Styling */
+    #loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--brand-blue), var(--brand-red));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .spinner {
+      border: 4px solid rgba(255,255,255,0.2);
+      border-top: 4px solid white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* ✅ Fix horizontal overflow on small screens */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ✅ Mobile nav styling */
+#mobileNav {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-top: 1px solid #eee;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+#mobileNav a {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f1f1;
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#mobileNav a:hover {
+  color: var(--brand-red);
+}
+
+@media (min-width: 1024px) {
+  #mobileNav {
+    display: none !important;
+  }
+}
+.rotating-gear {
+  display: inline-block;
+  animation: spin-gear 6s linear infinite;
+}
+
+@keyframes spin-gear {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

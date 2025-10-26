@@ -1,0 +1,131 @@
+<!-- Reusable Navbar Component -->
+<!-- File: components/navbar.html -->
+
+<header class="sticky top-0 z-40 bg-white shadow">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+    <!-- Logo and Company Name -->
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="flex items-center gap-3" id="logoLink">
+        <div class="w-20 h-20 rounded-md flex items-center justify-center bg-white">
+          <img src="./assets/Images/Aens' Logo - 2025_prev_ui.png" alt="Aens Engineering" class="h-18 w-auto object-contain" id="logoImg">
+        </div>
+        <div>
+          <div class="text-2xl font-bold">Aens Project & Engineering Services Ltd</div>
+          <div class="text-1xl text-slate-500"><i>Providing innovative and dependable engineering solutions...</i></div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-6 text-sm">
+      <a href="index.html" class="nav-link transition-colors duration-200" data-page="index.html">Home</a>
+      <a href="pages/about.html" class="nav-link transition-colors duration-200" data-page="about.html">About</a>
+      <a href="pages/services.html" class="nav-link transition-colors duration-200" data-page="services.html">Services</a>
+      <a href="pages/products.html" class="nav-link transition-colors duration-200" data-page="products.html">Products</a>
+      <a href="pages/contact.html" class="nav-link transition-colors duration-200" data-page="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <div class="lg:hidden">
+      <button id="mobileBtn" class="p-2 rounded-md border">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (Hidden by default) -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
+    <nav class="flex flex-col p-4 space-y-2">
+      <a href="index.html" class="mobile-nav-link py-2 px-4 hover:bg-gray-100 rounded transition-colors duration-200" data-page="index.html">Home</a>
+      <a href="pages/about.html" class="mobile-nav-link py-2 px-4 hover:bg-gray-100 rounded transition-colors duration-200" data-page="about.html">About</a>
+      <a href="pages/services.html" class="mobile-nav-link py-2 px-4 hover:bg-gray-100 rounded transition-colors duration-200" data-page="services.html">Services</a>
+      <a href="pages/products.html" class="mobile-nav-link py-2 px-4 hover:bg-gray-100 rounded transition-colors duration-200" data-page="products.html">Products</a>
+      <a href="pages/contact.html" class="mobile-nav-link py-2 px-4 hover:bg-gray-100 rounded transition-colors duration-200" data-page="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    // Detect if we're on the home page or in a subfolder
+    const currentPath = window.location.pathname;
+    const isHomePage = currentPath.endsWith('index.html') || currentPath.endsWith('/') || currentPath.split('/').pop() === '';
+    
+    // Update all links and image paths based on current location
+    const logoLink = document.getElementById('logoLink');
+    const logoImg = document.getElementById('logoImg');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    if (!isHomePage && currentPath.includes('/pages/')) {
+      // We're in a subfolder, adjust paths
+      logoLink.href = '../index.html';
+      logoImg.src = '../assets/Images/Aens\' Logo - 2025_prev_ui.png';
+      
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === 'index.html') {
+          link.href = '../index.html';
+        } else if (href.startsWith('pages/')) {
+          link.href = href.replace('pages/', '');
+        }
+      });
+      
+      mobileNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === 'index.html') {
+          link.href = '../index.html';
+        } else if (href.startsWith('pages/')) {
+          link.href = href.replace('pages/', '');
+        }
+      });
+    }
+    
+    // Mobile menu toggle
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Highlight active page - IMPROVED
+    const currentPage = currentPath.split('/').pop() || 'index.html';
+    const allNavLinks = [...navLinks, ...mobileNavLinks];
+    
+    allNavLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      
+      // Check if this is the active page
+      if (linkPage === currentPage || 
+          (currentPage === '' && linkPage === 'index.html') ||
+          (currentPage === 'index.html' && linkPage === 'index.html')) {
+        // Active page - RED
+        link.classList.add('text-red-600', 'font-semibold');
+        link.classList.remove('hover:text-brand-red');
+      } else {
+        // Inactive pages - default with hover
+        link.classList.add('text-slate-700', 'hover:text-red-600');
+      }
+    });
+  });
+</script>
+
+<style>
+  /* CSS Custom Properties for brand colors */
+  :root {
+    --brand-red: #dc2626; /* Tailwind red-600 */
+    --brand-blue: #2563eb; /* Tailwind blue-600 */
+  }
+  
+  /* Ensure hover works on non-active links */
+  .nav-link:not(.text-red-600):hover,
+  .mobile-nav-link:not(.text-red-600):hover {
+    color: var(--brand-red);
+  }
+</style>

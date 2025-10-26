@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products | AENS Project & Engineering Services Ltd</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/index.css">
+  <style>
+  .active {
+    color: #dc2626; /* Tailwind red-600 or your brand red */
+    font-weight: 600;
+  }
+   .brand-slider::-webkit-scrollbar { height: 10px; }
+    .brand-slider { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+</style>
+
+</head>
+
+<body class="antialiased text-slate-900">
+
+<!-- ✅ Loader -->
+<div id="loader">
+  <div class="spinner"></div>
+  <h2 class="text-white text-xl font-semibold mt-6">Loading AENS Engineering...</h2>
+</div>
+
+<!-- Header / Navbar -->
+<header class="sticky top-0 z-40 bg-white shadow">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+    <!-- Logo and Company Name -->
+    <div class="flex items-center gap-4">
+      <a href="../index.html" class="flex items-center gap-3">
+        <div class="w-20 h-20 rounded-md flex items-center justify-center bg-white">
+          <img src="../assets/Images/Aens' Logo - 2025_prev_ui.png" alt="Aens Engineering" class="h-18 w-auto object-contain">
+        </div>
+        <div>
+          <div class="text-2xl font-bold">Aens Project & Engineering Services Ltd</div>
+          <div class="text-1xl text-slate-500"><i>Providing innovative and dependable engineering solutions...</i></div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-6 text-sm">
+      <a href="../index.html" class="hover:text-brand-red">Home</a>
+      <a href="about.html" class="hover:text-brand-red">About</a>
+      <a href="services.html" class="hover:text-brand-red">Services</a>
+      <a href="products.html" class="hover:text-brand-red text-brand-red font-semibold active">Products</a>
+      <a href="contact.html" class="hover:text-brand-red">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <div class="lg:hidden">
+      <button id="mobileBtn" class="p-2 rounded-md border">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
+    <nav class="flex flex-col p-4 space-y-2">
+      <a href="../index.html" class="hover:text-brand-red py-2 px-4 hover:bg-gray-100 rounded">Home</a>
+      <a href="about.html" class="hover:text-brand-red py-2 px-4 hover:bg-gray-100 rounded">About</a>
+      <a href="services.html" class="hover:text-brand-red py-2 px-4 hover:bg-gray-100 rounded">Services</a>
+      <a href="products.html" class="hover:text-brand-red py-2 px-4 hover:bg-gray-100 rounded text-brand-red font-semibold active">Products</a>
+      <a href="contact.html" class="hover:text-brand-red py-2 px-4 hover:bg-gray-100 rounded">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ✅ Hero Section -->
+  <section class="relative py-20 bg-cover bg-center text-white"
+    style="background-image: url('../assets/Images/1000829411.jpg');">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0 border-4 border-dashed border-white/70 rounded-lg pointer-events-none"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-6 text-center" data-aos="fade-up">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Our Products</h1>
+      <div class="w-32 h-1 bg-[var(--brand-red)] rounded-full mx-auto my-6"></div>
+      <p class="mt-4 text-lg text-slate-200 max-w-3xl mx-auto">
+        AENS supplies a broad range of high-quality engineering equipment, tools, and industrial materials 
+        designed to meet the rigorous demands of construction, manufacturing, and oil & gas industries.
+      </p>
+    </div>
+  </section>
+
+<!-- ✅ Product Categories Section (REPLACEMENT) -->
+<section class="relative py-20 bg-cover bg-center bg-no-repeat"
+  style="background-image: url('../assets/Images/blue-curve-abstract-background-with-design-space.jpg');">
+  <div class="absolute inset-0 bg-white/70"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">
+      <span class="text-[var(--brand-blue)]">Product</span>
+      <span class="text-[var(--brand-red)]">Categories</span>
+    </h2>
+    <div class="w-32 h-1 bg-[var(--brand-red)] rounded-full mx-auto mb-12"></div>
+
+    <!-- GRID: 1 column on mobile, 3 columns on md+ -->
+    <div class="grid gap-8 md:grid-cols-3">
+
+      <!-- BRAND SLIDER TEMPLATE -->
+      <!-- ABB -->
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="zoom-in">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <h3 class="text-2xl font-bold text-[var(--brand-red)]">ABB</h3>
+            <p class="text-sm text-gray-600 max-w-xs">Advanced electrical & automation solutions for industrial use.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="brand-prev p-2 rounded-full border hover:bg-slate-100" aria-label="Previous ABB">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="brand-next p-2 rounded-full border hover:bg-slate-100" aria-label="Next ABB">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="brand-slider-wrapper relative">
+          <div class="brand-slider flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4"
+               tabindex="0" aria-label="ABB products slider">
+            <!-- Card 1 -->
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Abb1.jpg" alt="ABB Product 1" class="w-full h-40 object-cover">
+              <div class="p-3">
+                <h4 class="font-semibold text-sm mb-1">ABB Product 1</h4>
+                <p class="text-xs text-slate-500">Short description or model</p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Abb2.jpg" alt="ABB Product 2" class="w-full h-40 object-cover">
+              <div class="p-3">
+                <h4 class="font-semibold text-sm mb-1">ABB Product 2</h4>
+                <p class="text-xs text-slate-500">Short description or model</p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Abb3.jpg" alt="ABB Product 3" class="w-full h-40 object-cover">
+              <div class="p-3">
+                <h4 class="font-semibold text-sm mb-1">ABB Product 3</h4>
+                <p class="text-xs text-slate-500">Short description or model</p>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Abb4.jpg" alt="ABB Product 4" class="w-full h-40 object-cover">
+              <div class="p-3">
+                <h4 class="font-semibold text-sm mb-1">ABB Product 4</h4>
+                <p class="text-xs text-slate-500">Short description or model</p>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Abb5.jpg" alt="ABB Product 5" class="w-full h-40 object-cover">
+              <div class="p-3">
+                <h4 class="font-semibold text-sm mb-1">ABB Product 5</h4>
+                <p class="text-xs text-slate-500">Short description or model</p>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Abb6.jpg" alt="ABB Product 6" class="w-full h-40 object-cover">
+              <div class="p-3">
+                <h4 class="font-semibold text-sm mb-1">ABB Product 6</h4>
+                <p class="text-xs text-slate-500">Short description or model</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Schneider Electric -->
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="zoom-in">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <h3 class="text-2xl font-bold text-[var(--brand-red)]">Schneider Electric</h3>
+            <p class="text-sm text-gray-600 max-w-xs">Efficient energy management & automation systems for modern projects.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="brand-prev p-2 rounded-full border hover:bg-slate-100" aria-label="Previous Schneider">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="brand-next p-2 rounded-full border hover:bg-slate-100" aria-label="Next Schneider">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="brand-slider-wrapper relative">
+          <div class="brand-slider flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4"
+               tabindex="0" aria-label="Schneider products slider">
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Schnieder1.jpg" alt="Schneider 1" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Schneider 1</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Schnieder2.jpg" alt="Schneider 2" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Schneider 2</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Schnieder3.jpg" alt="Schneider 3" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Schneider 3</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Schnieder4.jpg" alt="Schneider 4" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Schneider 4</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Schnieder5.jpg" alt="Schneider 5" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Schneider 5</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/Schnieder6.jpg" alt="Schneider 6" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Schneider 6</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Siemens -->
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="zoom-in">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <h3 class="text-2xl font-bold text-[var(--brand-red)]">Siemens</h3>
+            <p class="text-sm text-gray-600 max-w-xs">Robust automation, drive and energy efficiency products built to last.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="brand-prev p-2 rounded-full border hover:bg-slate-100" aria-label="Previous Siemens">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="brand-next p-2 rounded-full border hover:bg-slate-100" aria-label="Next Siemens">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="brand-slider-wrapper relative">
+          <div class="brand-slider flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4"
+               tabindex="0" aria-label="Siemens products slider">
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/siemens1.jpg" alt="Siemens 1" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Siemens 1</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/siemens2.jpg" alt="Siemens 2" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Siemens 2</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/siemens3.jpg" alt="Siemens 3" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Siemens 3</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/siemens4.jpg" alt="Siemens 4" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Siemens 4</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/siemens5.jpg" alt="Siemens 5" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Siemens 5</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+            <article class="min-w-[70%] sm:min-w-[42%] md:min-w-[220px] lg:min-w-[260px] snap-center bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="../assets/Images/siemens6.jpg" alt="Siemens 6" class="w-full h-40 object-cover">
+              <div class="p-3"><h4 class="font-semibold text-sm mb-1">Siemens 6</h4><p class="text-xs text-slate-500">Model note</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ✅ Featured Products Section -->
+  <section class="relative py-20 bg-cover bg-center bg-no-repeat"
+    style="background-image: url('../assets/Images/blue-curve-abstract-background-with-design-space.jpg');">
+    <div class="absolute inset-0 bg-white/70"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-up">Featured Products</h2>
+      <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up">
+        Explore our range of high-quality industrial products and equipment.
+      </p>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Product 1 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg text-center card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+            <i class="bi bi-droplet-fill text-white text-5xl"></i>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold text-slate-800 mb-2">Industrial Pumps</h4>
+            <p class="text-xs text-slate-600">High-performance pumps for various industrial applications</p>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg text-center card-hover" data-aos="fade-up" data-aos-delay="150">
+          <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+            <i class="bi bi-plug text-white text-5xl"></i>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold text-slate-800 mb-2">Cables & Conductors</h4>
+            <p class="text-xs text-slate-600">Premium quality electrical cables and conductors</p>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg text-center card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+            <i class="bi bi-shield-fill text-white text-5xl"></i>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold text-slate-800 mb-2">Safety Helmets</h4>
+            <p class="text-xs text-slate-600">Industry-standard safety helmets and PPE</p>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg text-center card-hover" data-aos="fade-up" data-aos-delay="250">
+          <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+            <i class="bi bi-gear-wide-connected text-white text-5xl"></i>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold text-slate-800 mb-2">Valves & Bearings</h4>
+            <p class="text-xs text-slate-600">Precision valves and bearings for machinery</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Product Benefits Section -->
+  <section class="relative py-16 bg-cover bg-center text-white"
+    style="background-image: url('../assets/Images/smart-factory-mechanic-using-tablet-analyze-iot-sensors-data.jpg');">
+    
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Text -->
+        <div data-aos="fade-right" class="space-y-5">
+          <h2 class="text-3xl font-extrabold flex items-center gap-3">
+            <span class="text-[var(--brand-blue)] rotating-gear"><i class="bi bi-gear-fill"></i></span>
+            Why Choose Our Products?
+          </h2>
+
+          <div class="w-24 h-1 bg-[var(--brand-red)] rounded-full mb-4"></div>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded">
+              <i class="bi bi-patch-check-fill text-[var(--brand-blue)] text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-white">Certified Quality</h4>
+                <p class="text-sm text-slate-200">All products meet international quality standards and certifications.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded">
+              <i class="bi bi-truck text-[var(--brand-red)] text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-white">Reliable Delivery</h4>
+                <p class="text-sm text-slate-200">Fast and efficient delivery to your project site.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded">
+              <i class="bi bi-headset text-yellow-500 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-white">Technical Support</h4>
+                <p class="text-sm text-slate-200">Expert guidance and after-sales support for all products.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="relative w-full flex justify-center" data-aos="fade-left">
+          <div class="absolute -top-5 -right-5 w-4/5 h-4/5 bg-[var(--brand-red)] rounded-lg opacity-80"></div>
+          <img 
+            src="../assets/Images/1000829404.jpg" 
+            alt="AENS Products" 
+            class="relative rounded-lg shadow-2xl w-full max-w-md object-cover border-4 border-white"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ CTA Section -->
+  <section class="relative py-16 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto text-center px-6" data-aos="zoom-in">
+      <h2 class="text-3xl md:text-4xl font-bold text-[var(--brand-red)] mb-4">Need Custom Equipment Supply?</h2>
+      <p class="max-w-3xl mx-auto text-slate-300 mb-8 text-lg">
+        We source and deliver specialized engineering tools, industrial machinery, and safety devices 
+        based on your project's unique technical requirements.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="contact.html" class="inline-flex items-center gap-3 bg-[var(--brand-red)] hover:bg-red-700 text-white px-8 py-3 rounded shadow transition">
+          Request a Quote
+        </a>
+        <a href="services.html" class="inline-flex items-center gap-3 bg-white/10 text-white px-8 py-3 rounded hover:bg-white/20 transition">
+          View Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ✅ Footer -->
+<footer class="bg-slate-900 text-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+    <div>
+      <h4 class="text-white font-bold mb-3">Aens Projects & Engineering Services Ltd</h4>
+      <p class="text-sm">Plot 2 Ohaeto str. D-line • Port-Harcourt, Rivers state, Nigeria.</p>
+      <p class="mt-2">+234-703-253-8441, +234-706-895-8423<br/>info@aensengineering.com<br/>aensengineering@gmail.com</p>
+    </div>
+    <div>
+      <h4 class="text-white font-bold mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="services.html" class="hover:text-white">Services</a></li>
+        <li><a href="products.html" class="hover:text-white">Products</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-bold mb-3">Subscribe</h4>
+      <form class="flex gap-2">
+        <input type="email" placeholder="your email" class="p-2 rounded text-black" />
+        <button class="bg-[var(--brand-red)] px-3 rounded text-white">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="border-t border-slate-800 py-4 text-center text-sm">© 2025 Aens Projects & Engineering services Ltd. All rights reserved.</div>
+</footer>
+
+<!-- ✅ Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="../js/index.js"></script>
+<script>
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById('mobileBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  }
+  // Generic slider prev/next behavior
+  (function () {
+    // find all groups (each card group has its own prev/next buttons left-to-right)
+    const brandContainers = Array.from(document.querySelectorAll('.bg-white.rounded-xl'));
+    brandContainers.forEach(group => {
+      const slider = group.querySelector('.brand-slider');
+      const prevBtn = group.querySelector('.brand-prev');
+      const nextBtn = group.querySelector('.brand-next');
+
+      if (!slider || !prevBtn || !nextBtn) return;
+
+      // Scroll distance = one visible card width (approx)
+      function getScrollAmount() {
+        const card = slider.querySelector('article');
+        return card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(slider).gap || 16) : slider.clientWidth;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      });
+
+      // Keyboard navigation for accessibility
+      slider.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') slider.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        if (e.key === 'ArrowLeft') slider.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
